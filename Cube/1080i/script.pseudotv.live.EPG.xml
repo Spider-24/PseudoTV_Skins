@@ -3,17 +3,8 @@
     <onload>SetProperty(PTVL.EPG_Opened,true,10000)</onload>
     <onunload>SetProperty(PTVL.EPG_Opened,false,10000)</onunload> 
     <onload>SetProperty(PTVL.EPG_Opened,true,10000)</onload>
-    <onload condition="Control.IsVisible(9000)">ActivateWindow(10006)</onload><!-- Activate random window, workaround for videowindow starting paused -->
-    <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-    <onload condition="!Control.IsVisible(9000) + System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>
-<onunload>ActivateWindow(12005)</onunload>
-    <zorder>1</zorder>
-    <coordinates>
-        <system>1</system>
-        <posx>0</posx>
-        <posy>0</posy>
-    </coordinates>
-    <animation effect="fade" time="5">WindowOpen</animation>
+
+   
     <controls>
 	 <control type="label" id="9000"> 
                 <description>VideoWindow Box Label</description>
@@ -109,7 +100,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <label>Current Date</label>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <textcolor>FFFFFFFF</textcolor>
             <shadowcolor>ff000000</shadowcolor>
         </control>
@@ -129,12 +120,12 @@
                 <width>200</width>
                 <height>38</height>
                 <label>EPG</label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>center</align>
                 <aligny>center</aligny>
 				<texturenofocus>NA.png</texturenofocus>
                 <texturefocus>EPGbuttonFocus.png</texturefocus>
-                <textcolor>ffffa500</textcolor>
+                <textcolor>white</textcolor>
                 <shadowcolor>ff000000</shadowcolor>
         </control>               
         <control type="button" id="6002">
@@ -144,12 +135,12 @@
                 <width>200</width>
                 <height>38</height>
                 <label>DVR</label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>center</align>
                 <aligny>center</aligny>
 				<texturenofocus>NA.png</texturenofocus>
                 <texturefocus>EPGbuttonFocus.png</texturefocus>
-                <textcolor>ffffa500</textcolor>
+                <textcolor>white</textcolor>
                 <shadowcolor>ff000000</shadowcolor>
         </control>               
         <control type="button" id="6003">
@@ -159,12 +150,12 @@
                 <width>200</width>
                 <height>38</height>
                 <label>OnDemand</label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>center</align>
                 <aligny>center</aligny>
 				<texturenofocus>NA.png</texturenofocus>
                 <texturefocus>EPGbuttonFocus.png</texturefocus>
-                <textcolor>ffffa500</textcolor>
+                <textcolor>white</textcolor>
                 <shadowcolor>ff000000</shadowcolor>
         </control>               
         <control type="button" id="6004">
@@ -174,12 +165,12 @@
                 <width>200</width>
                 <height>38</height>
                 <label>Apps</label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>center</align>
                 <aligny>center</aligny>
 				<texturenofocus>NA.png</texturenofocus>
                 <texturefocus>EPGbuttonFocus.png</texturefocus>
-                <textcolor>ffffa500</textcolor>
+                <textcolor>white</textcolor>
                 <shadowcolor>ff000000</shadowcolor>
         </control>   
         <control type="image" id="5002">
@@ -201,7 +192,7 @@
             <width min="155" max="400">auto</width>
             <height>38</height>
             <label>Time 1</label>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -215,7 +206,7 @@
             <width min="150" max="400">auto</width>
             <height>38</height>
             <label>Time 2</label>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -229,7 +220,7 @@
             <width min="150" max="400">auto</width>
             <height>38</height>
             <label>Time 3</label>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
@@ -243,7 +234,7 @@
             <width>170</width>
             <height>38</height>
             <label>Time 4</label>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <aligny>center</aligny>
             <textcolor>FFFFFFFF</textcolor>
             <shadowcolor>ff000000</shadowcolor>
@@ -317,7 +308,7 @@
                 <width>75</width>
                 <height>70</height>
                 <label></label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>right</align>
                 <aligny>center</aligny>
                 <textcolor>FFFFFFFF</textcolor>
@@ -327,7 +318,7 @@
                 <width>75</width>
                 <height>70</height>
                 <label></label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>right</align>
                 <aligny>center</aligny>
                 <textcolor>FFFFFFFF</textcolor>
@@ -337,7 +328,7 @@
                 <width>75</width>
                 <height>70</height>
                 <label></label>
-                <font>ubuntu12</font>
+                <font>font12</font>
                 <align>right</align>
                 <aligny>center</aligny>
                 <textcolor>FFFFFFFF</textcolor>
@@ -356,10 +347,10 @@
                 <height>55</height>
                 <label></label>
                 <font>ubuntu12</font>
-             <align>center</align>
+                <align>center</align>
                 <aligny>top</aligny>
                 <textcolor>ffffa500</textcolor>
-                <visible>StringCompare(Control.GetLabel(321),)</visible>
+                <visible>String.IsEmpty(Control.GetLabel(321))</visible>
                 <scroll>true</scroll>
                 <scrollspeed>20</scrollspeed>
             </control>
@@ -370,7 +361,7 @@
                 <align>center</align>
                 <aligny>bottom</aligny>
                 <aspectratio>keep</aspectratio>      
-                <visible>!StringCompare(Control.GetLabel(321),)</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(321))</visible>
             </control>
             <control type="label" id="302">
                 <description>Channel 2 Name</description>
@@ -381,7 +372,7 @@
                 <align>center</align>
                 <aligny>top</aligny>
                 <textcolor>ffffa500</textcolor>
-                <visible>StringCompare(Control.GetLabel(322),)</visible>
+                <visible>String.IsEmpty(Control.GetLabel(322))</visible>
                 <scroll>true</scroll>
                 <scrollspeed>20</scrollspeed>
             </control>
@@ -392,7 +383,7 @@
                 <align>center</align>
                 <aligny>bottom</aligny>
                 <aspectratio>keep</aspectratio>
-                <visible>!StringCompare(Control.GetLabel(322),)</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(322))</visible>
             </control>
             <control type="label" id="303">
                 <description>Channel 3 Name</description>
@@ -403,7 +394,7 @@
                 <align>center</align>
                 <aligny>top</aligny>
                 <textcolor>ffffa500</textcolor>
-                <visible>StringCompare(Control.GetLabel(323),)</visible>
+                <visible>String.IsEmpty(Control.GetLabel(323))</visible>
                 <scroll>true</scroll>
                 <scrollspeed>20</scrollspeed>
             </control>
@@ -414,7 +405,7 @@
                 <align>center</align>
                 <aligny>bottom</aligny>
                 <aspectratio>keep</aspectratio>
-                <visible>!StringCompare(Control.GetLabel(323),)</visible>
+                <visible>!String.IsEmpty(Control.GetLabel(323))</visible>
             </control>
         </control>
 		<control type="image">                  
@@ -494,7 +485,7 @@
             <fadetime>250</fadetime>
             <textcolor>FFFFFFFF</textcolor>
             <shadowcolor>ff000000</shadowcolor>
-            <font>ubuntu12</font>
+            <font>font12</font>
             <align>center</align>
             <aligny>center</aligny>
         </control>
@@ -551,8 +542,8 @@
                 <description>Show Title Label</description>
                 <width min="5" max="370">auto</width>
                 <height>30</height>
-                <font>ubuntu12</font>
-                <textcolor>ffffa500</textcolor>
+                <font>font12</font>
+                <textcolor>white</textcolor>
                 <scroll>true</scroll>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -566,7 +557,7 @@
                 <width min="5" max="370">auto</width>
                 <height>30</height>
                 <font>ubuntu10</font>
-                <textcolor>ffffa500</textcolor>
+                <textcolor>white</textcolor>
                 <scroll>true</scroll>
                 <align>left</align>
                 <aligny>center</aligny>
